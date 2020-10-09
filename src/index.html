@@ -2,21 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Static Site Boilerplate</title>
-    <meta name="description" content="" />
+	<meta charset="utf-8">
+	<title>Made Rio | Home</title>
+	<meta name="description" content="" />
 </head>
 
 <body>
 
+	<div id="main">
+		<nav>
+			<ul>
+				<li>
+					<span>
+						<a href="index.html">HOME</a>
+					</span>
+				</li>
+				<li>
+					<span>
+						<a href="info.html">INFO</a>
+					</span>
+				</li>
+				<li>
+					<span>
+						<a href="camaleao.html">CAMALEÃO</a>
+					</span>
+				</li>
+				<li>
+					<span>
+						<a href="contato.html">CONTATO</a>
+					</span>
+				</li>
+			</ul>
+		</nav>
+
+		<section id="home">
+
+			<div class="colorslider">
+				<input type="range" data-default="0" value="0" min="0" max="360" step="1" id="hue-rotate"
+					oninput="hueFunction(this.value)" class="range">
+				<img src="images/colorbar.png" alt="">
+			</div>
+
+			<div class="intro">
+				<img src="images/txt-adaptive.png" alt="ADAPTIVE" class="intro__img-holder">
+				<img src="images/txt-creativity.png" alt="CREATIVITY" class="intro__img-holder intro__img-holder--effect">
+				<img src="images/logo-made.png" alt="MADE" class="intro__img-holder intro__img-holder--logo">
+			</div>
+		</section>
+
+		<footer>
+			<div>
+				<img src="images/txt-credits.png" alt="Credits. All rights reserved.">
+			</div>
+			<div>
+				<img src="images/txt-established.png" alt="Established since never.">
+			</div>
+		</footer>
+
+		<img src="images/background.png" id="main-image" alt="">
+
+	</div>
+
 </body>
-
-<div class="main">
-    <input type="range" data-default="0" value="0" min="0" max="360" step="1" id="hue-rotate"
-        oninput="hueFunction(this.value)" class="range">
-    <img src="images/camaleao.jpg" alt="" class="image" id="main-image">
-
-    new site made
-</div>
 
 </html>

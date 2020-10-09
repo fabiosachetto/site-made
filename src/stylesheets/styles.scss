@@ -1,25 +1,29 @@
 // Load CSS Reset from NPM
 @import '~normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 html,
 body {
-  background-color: #000;
   height: 100%;
+  background-color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
-.main {
+body {
+  background: #000;
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#main {
   width: 100%;
   height: 100vh;
   position: relative;
-
-  .image {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-  }
 
   .range {
     display: block;
@@ -27,7 +31,161 @@ body {
     right: 0;
     top: 50%;
     z-index: 10;
-    width: 300px;
-    transform: rotate(90deg);
+    width: 303px;
+    transform: rotate(-90deg);
   }
+
+  #main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: auto;
+    height: 100vh;
+  }
+}
+
+$gradient: url('../images/over.png') 0 0 no-repeat;
+
+nav {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  z-index: 10;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+
+      span {
+        position: relative;
+        display: block;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0%;
+          height: 1px;
+          top: 50%;
+          margin-top: -0.5px;
+          background: $gradient;
+        }
+
+        &::before {
+          left: -2.5px;
+        }
+
+        &::after {
+          right: 2.5px;
+          background: $gradient;
+          transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        &:hover::before {
+          background: $gradient;
+          width: 100%;
+          transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        &:hover::after {
+          background: transparent;
+          width: 100%;
+          transition: 0s;
+        }
+      }
+
+      a {
+        font-size: 1rem;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 2.5;
+        letter-spacing: 0.4rem;
+      }
+    }
+  }
+}
+
+footer {
+  width: calc(100vw - 6rem);
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#home {
+  .intro {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    display: flex;
+    z-index: 10;
+    mix-blend-mode: exclusion;
+
+    &__img-holder {
+      &--effect {
+        margin-left: 2.5rem;
+        mix-blend-mode: color-dodge;
+      }
+
+      &--logo {
+        position: absolute;
+        bottom: -90px;
+        left: 0;
+      }
+    }
+  }
+}
+
+/* SLIDER */
+input[type='range'] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: url('../images/colorbar.png') 0 0 no-repeat;
+  border-radius: 0;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  box-shadow: none;
+  border: 0px solid #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: grabbing;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+  //background: url('../images/colorbar.png') 0 0 no-repeat;
 }
