@@ -1,0 +1,97 @@
+// Headlines
+@mixin headline-h1 {
+  font-family: $font;
+  font-size: rem(96px);
+  font-style: normal;
+  font-weight: 200;
+  line-height: rem(112px);
+  letter-spacing: -1.5px;
+}
+
+@mixin headline-h2 {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 200;
+  font-size: rem(60px);
+  line-height: rem(72px);
+  letter-spacing: -0.5px;
+}
+
+@mixin headline-h3 {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(48px);
+  line-height: rem(56px);
+}
+
+@mixin headline-h4 {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(34px);
+  line-height: rem(36px);
+}
+
+@mixin headline-h5 {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(24px);
+  line-height: rem(28px);
+  letter-spacing: 0.18px;
+}
+
+@mixin headline-h6 {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(20px);
+  line-height: rem(24px);
+  letter-spacing: 0.15px;
+}
+
+// Body
+@mixin body-small($weight: 400) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+@mixin body-medium($weight: 400) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+// Caption
+@mixin caption($weight: 400) {
+  font-family: $font;
+  font-weight: $weight;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
+// Overline
+@mixin overline($weight: 400) {
+  font-family: $font;
+  font-weight: $weight;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+}
+
+// MENU FONT
+@font-face {
+  font-family: 'grotzec_headlinebold_cnd';
+  src: url('../fonts/grotzec_headline_bold_cnd-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

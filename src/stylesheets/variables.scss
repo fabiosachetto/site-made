@@ -1,0 +1,57 @@
+// Media Queries
+// ----------------------------------------------------------
+
+$mq: (
+  'mobile': 320px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop': 1280px,
+  'infinity': 1440px,
+);
+
+// Guide Colors
+// ----------------------------------------------------------
+
+$colors: (
+  'transparent': transparent,
+  'white': #fff,
+  'black': #000,
+  'text-gray': #c4c4c4,
+  'button-background': #97877a,
+  'primary': #97877a,
+  'error': #bc2b42,
+  'neutral-700': #565656,
+  'neutral-500': #949394,
+  'neutral-400': #b5b5b5,
+  'neutral-100': #f4f3f3,
+  'neutral-050': #f9f9f9,
+);
+
+// Functions
+// ----------------------------------------------------------
+
+@mixin mq($mq-value) {
+  @media (min-width: map-get($mq, $mq-value)) {
+    @content;
+  }
+}
+
+@function color($color-value) {
+  @return map-get($colors, $color-value);
+}
+
+@function rem($size) {
+  @return $size / 10px * 1rem;
+}
+
+// Default variables
+// ----------------------------------------------------------
+
+$base-font-size: 62.5%;
+$font: 'Inter', sans-serif;
+$ns: getnamespace();
+$button-radius: 32px;
+$tooltip-radius: 4px;
+$container-radius: 4px;
+$shadow: 0 16px 24px -8px rgba(0, 0, 0, 0.08);
+$grid-width: 1312px;
