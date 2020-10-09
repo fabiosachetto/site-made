@@ -153,22 +153,23 @@ section {
     position: absolute;
     top: rem(445px);
     left: rem(100px);
-    display: flex;
     z-index: 10;
-    mix-blend-mode: exclusion;
 
     &__img-holder {
-      &--effect {
-        margin-left: 2.5rem;
-        mix-blend-mode: color-dodge;
-      }
-
       &--logo {
         position: absolute;
         bottom: -90px;
         left: 0;
       }
     }
+  }
+
+  .effect {
+    position: absolute;
+    top: rem(445px);
+    left: rem(650px);
+    z-index: 10;
+    mix-blend-mode: color-dodge;
   }
 }
 
