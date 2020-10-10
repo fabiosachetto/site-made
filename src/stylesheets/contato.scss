@@ -4,8 +4,58 @@
   .section-content {
     display: flex;
     justify-content: left;
+    flex-direction: column;
     margin: rem(105px) rem(450px);
-    border: 1px solid #666;
     height: rem(450px);
+
+    &__cards {
+      display: flex;
+      justify-content: center;
+
+      &__card {
+        margin: rem(140px) 0;
+        flex: 1;
+
+        &__title-holder {
+          margin-top: rem(25px);
+          text-align: left;
+          font-family: 'grotzec_headlinebold_cnd', sans-serif;
+          text-transform: uppercase;
+          font-size: rem(29.62px);
+        }
+
+        &__text-holder {
+          margin-top: rem(15px);
+          text-align: left;
+          font-family: 'grotzec_headlinebold_cnd', sans-serif;
+          font-size: rem(18.6px);
+
+          a {
+            text-decoration: none;
+            color: #000;
+            transition: 0.3s;
+
+            &:hover {
+              opacity: 0.5;
+            }
+
+            &.link-social {
+              margin-right: rem(15px);
+            }
+          }
+        }
+
+        &__button-holder {
+          margin-top: rem(30px);
+        }
+
+        .separator {
+          height: 2px;
+          background: #000;
+          margin: 20px 0;
+          width: 95px;
+        }
+      }
+    }
   }
 }
