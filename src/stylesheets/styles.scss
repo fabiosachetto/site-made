@@ -15,7 +15,7 @@ body {
 
 body {
   background: #000;
-  background-size: cover;
+  color: color('white');
 }
 
 img {
@@ -83,12 +83,14 @@ nav {
           transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
+        &.current::before,
         &:hover::before {
           background: $gradient;
           width: 100%;
           transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
+        &.current::after,
         &:hover::after {
           background: transparent;
           width: 100%;
@@ -107,6 +109,10 @@ nav {
         font-weight: 700;
       }
     }
+  }
+
+  .img-logo-made {
+    margin-top: rem(20px);
   }
 }
 
@@ -127,6 +133,11 @@ section {
   position: relative;
   width: 100vw;
   height: 100vh;
+
+  .img-slogan {
+    margin: 0;
+    text-align: right;
+  }
 }
 
 #home {
@@ -170,6 +181,46 @@ section {
     left: rem(650px);
     z-index: 10;
     mix-blend-mode: overlay;
+  }
+}
+
+#info {
+  padding: rem(75px) rem(100px);
+
+  .images-holder {
+    display: flex;
+    justify-content: center;
+
+    &__card {
+      margin: rem(140px) rem(25px) 0;
+
+      > img {
+        border-bottom: 10px solid red;
+      }
+
+      &__title-holder {
+        margin-top: rem(25px);
+        text-align: left;
+        font-family: 'grotzec_headlinebold_cnd', sans-serif;
+        text-transform: uppercase;
+
+        span {
+          display: block;
+        }
+
+        &--title {
+          font-size: rem(35.32px);
+        }
+
+        &--subtitle {
+          font-size: rem(18.61px);
+        }
+      }
+
+      &__button-holder {
+        margin-top: rem(30px);
+      }
+    }
   }
 }
 
