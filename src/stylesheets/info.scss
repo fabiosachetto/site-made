@@ -4,8 +4,22 @@
   .section-content {
     display: flex;
     justify-content: left;
+    flex-direction: column;
     margin: rem(105px) rem(450px);
-    border: 1px solid #666;
     height: rem(450px);
+    color: #000;
+
+    &__cards {
+      display: flex;
+      justify-content: center;
+
+      &__card {
+        flex: 1;
+
+        p {
+          font-size: rem(22px);
+        }
+      }
+    }
   }
 }

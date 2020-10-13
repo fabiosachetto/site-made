@@ -44,6 +44,12 @@ $colors: (
   @return $size / 10px * 1rem;
 }
 
+@function vw($size) {
+  $vw-context: (1920 * 0.01) * 1px;
+
+  @return ($size/$vw-context) * 1vw;
+}
+
 // Default variables
 // ----------------------------------------------------------
 
