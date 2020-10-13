@@ -1,11 +1,11 @@
 #contact {
-  padding: rem(75px) rem(100px);
+  padding: vw(75px) vw(100px);
 
   .section-content {
     display: flex;
     justify-content: left;
     flex-direction: column;
-    margin: rem(105px) rem(450px);
+    margin: vw(105px) vw(450px);
     height: rem(450px);
 
     &__cards {
@@ -13,11 +13,11 @@
       justify-content: center;
 
       &__card {
-        margin: rem(140px) 0;
+        margin: vw(140px) 0;
         flex: 1;
 
         &__title-holder {
-          margin-top: rem(25px);
+          margin-top: vw(25px);
           text-align: left;
           font-family: 'grotzec_headlinebold_cnd', sans-serif;
           text-transform: uppercase;
@@ -25,7 +25,7 @@
         }
 
         &__text-holder {
-          margin-top: rem(15px);
+          margin-top: vw(15px);
           text-align: left;
           font-family: 'grotzec_headlinebold_cnd', sans-serif;
           font-size: rem(18.6px);
@@ -40,13 +40,13 @@
             }
 
             &.link-social {
-              margin-right: rem(15px);
+              margin-right: vw(15px);
             }
           }
         }
 
         &__button-holder {
-          margin-top: rem(30px);
+          margin-top: vw(30px);
         }
 
         .separator {

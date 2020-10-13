@@ -1,0 +1,23 @@
+@media screen and (max-width: 1440px) {
+  #main #main-image {
+    width: 75vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #home .effect {
+    left: 42rem;
+    top: 27.5rem;
+    transform: scale(0.6);
+  }
+
+  #home .intro {
+    top: 27.5rem;
+    transform: scale(0.6);
+  }
+
+  #home .colorslider {
+    transform: scale(0.6) translateY(-50%);
+    top: 50%;
+  }
+}

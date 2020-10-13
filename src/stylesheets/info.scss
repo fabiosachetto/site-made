@@ -1,13 +1,12 @@
 #clients {
-  padding: rem(75px) rem(100px);
+  padding: vw(75px) vw(100px);
 
   .section-content {
     display: flex;
     justify-content: left;
     flex-direction: column;
-    margin: rem(105px) rem(450px);
+    margin: vw(105px) vw(450px);
     height: rem(450px);
-    color: #000;
 
     &__cards {
       display: flex;
@@ -18,6 +17,64 @@
 
         p {
           font-size: rem(22px);
+        }
+      }
+    }
+  }
+}
+
+#more {
+  padding: vw(75px) vw(100px);
+
+  .section-content {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: vw(105px) vw(450px);
+    height: rem(450px);
+
+    &__cards {
+      display: flex;
+      justify-content: end;
+      margin: vw(20px) 0;
+
+      &__card {
+        width: vw(550px);
+        overflow: hidden;
+
+        p {
+          font-size: rem(22px);
+        }
+
+        &__carousel {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+
+          > div {
+            margin: 0 vw(20px) 0 0;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 100%;
+            height: vw(300px);
+            transform-origin: center center;
+            transform: scale(1);
+            transition: transform 0.5s;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+          }
+        }
+
+        .slider-counter {
+          margin: vw(20px) 0;
+          text-decoration: none;
+          font-size: rem(20px);
+          color: #fff;
         }
       }
     }

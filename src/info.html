@@ -42,76 +42,78 @@
 			</figure>
 
 			<div class="images-holder">
-				<a href="#about" class="open-modal">
-					<div class="images-holder__card">
-						<img src="images/photo-alvaro.png" alt="ÁLVARO RODIGUES">
+				<div class="images-holder__card">
+					<a href="#about" class="open-modal">
+						<img src="images/photo-alvaro.png" alt="ÁLVARO RODIGUES" class="photo">
+						<div class="border left"></div>
 						<div class="images-holder__card__title-holder">
 							<span class="images-holder__card__title-holder--title">ÁLVARO RODIGUES</span>
 							<span class="images-holder__card__title-holder--subtitle">PARTNER / CEO MADE RIO</span>
 						</div>
 						<div class="images-holder__card__button-holder">
 							<a href="javascript:;" class="btn-scroll">
-								<img src="images/scroll-down.png" alt="scroll down">
+								<img src="images/scroll-down.png" alt="scroll down" data-target="#clients" class="scroll-to">
 							</a>
 						</div>
-				</a>
+					</a>
+				</div>
+
+				<div class="images-holder__card">
+					<a href="#about" class="open-modal">
+						<img src="images/photo-lc.png" alt="LUÍS SALVESTRONI" class="photo">
+						<div class="border right"></div>
+						<div class="images-holder__card__title-holder">
+							<span class="images-holder__card__title-holder--title">LUÍS SALVESTRONI</span>
+							<span class="images-holder__card__title-holder--subtitle">PARTNER & HEAD OF CONTENT &
+								ADVERTISING</span>
+						</div>
+					</a>
+				</div>
+
 			</div>
 
-			<div class="images-holder__card">
-				<a href="#about" class="open-modal">
-					<img src="images/photo-lc.png" alt="LUÍS SALVESTRONI">
-					<div class="images-holder__card__title-holder">
-						<span class="images-holder__card__title-holder--title">LUÍS SALVESTRONI</span>
-						<span class="images-holder__card__title-holder--subtitle">PARTNER & HEAD OF CONTENT &
-							ADVERTISING</span>
+			<div id="about" class="modal">
+				<div class="modal__content">
+					<h2>About Us</h2>
+					<div class="modal__content__wrapper">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis illo dicta enim placeat iusto praesentium
+							recusandae necessitatibus ratione! Dolorem molestias quas voluptate laborum aperiam a in, rem fugit
+							voluptatibus ratione!</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, exercitationem quo a modi doloribus
+							accusamus voluptatem autem provident tempora fugiat hic error laudantium alias illo, explicabo sunt sed
+							quibusdam distinctio!</p>
 					</div>
-				</a>
+				</div>
+				<div class="modal__background"></div>
 			</div>
+		</section>
 
-	</div>
+		<section id="clients">
 
-	<div id="about" class="modal">
-		<div class="modal__content">
-			<h2>About Us</h2>
-			<div class="modal__content__wrapper">
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis illo dicta enim placeat iusto praesentium
-					recusandae necessitatibus ratione! Dolorem molestias quas voluptate laborum aperiam a in, rem fugit
-					voluptatibus ratione!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, exercitationem quo a modi doloribus
-					accusamus voluptatem autem provident tempora fugiat hic error laudantium alias illo, explicabo sunt sed
-					quibusdam distinctio!</p>
-			</div>
-		</div>
-		<div class="modal__background"></div>
-	</div>
-	</section>
+			<div class="section-content">
+				<h2><img src="images/tit-clientes.png" alt=""></h2>
 
-	<section id="clients">
-
-		<div class="section-content">
-			<h2><img src="images/tit-clientes.png" alt=""></h2>
-
-			<div class="section-content__cards">
-				<div class="section-content__cards__card">
-					<p>Lorem Ipsum</p>
-					<p>Lorem Ipsum</p>
-					<p>Lorem Ipsum</p>
-					<p>Lorem Ipsum</p>
-					<p>Lorem Ipsum</p>
+				<div class="section-content__cards">
+					<div class="section-content__cards__card">
+						<p>Lorem Ipsum</p>
+						<p>Lorem Ipsum</p>
+						<p>Lorem Ipsum</p>
+						<p>Lorem Ipsum</p>
+						<p>Lorem Ipsum</p>
+					</div>
 				</div>
 			</div>
-		</div>
 
-	</section>
+		</section>
 
-	<footer>
-		<div>
-			Credits. All rights reserved.
-		</div>
-		<div>
-			<img src="images/txt-established.png" alt="Established since never.">
-		</div>
-	</footer>
+		<footer>
+			<div>
+				Credits. All rights reserved.
+			</div>
+			<div>
+				<img src="images/txt-established.png" alt="Established since never.">
+			</div>
+		</footer>
 
 	</div>
 
@@ -128,6 +130,13 @@
 			$('#about').removeClass('opened', () => {
 				$('body').removeClass('modal-opened');
 			})
+		});
+
+		$(".scroll-to").click(function () {
+			let target = $(this).data('target');
+			$('html, body').animate({
+				scrollTop: $(target).offset().top
+			}, 2000);
 		});
 	}))
 </script>

@@ -33,7 +33,7 @@
 					</span>
 				</li>
 			</ul>
-			<img src="images/made-camaleao.png" alt="" class="img-logo-made">
+			<img src="images/logo-made-texture.png" alt="" class="img-logo-made">
 		</nav>
 
 		<section id="made-chameleon">
@@ -46,6 +46,48 @@
 					<img src="images/camaleao-01.png" class="step-1" alt="">
 					<img src="images/camaleao-02.png" class="step-2" alt="">
 					<img src="images/camaleao-03.png" class="step-3" alt="">
+				</div>
+			</div>
+
+			<a href="javascript:;" data-target="#more" class="scroll-to arrow-down"><img src="images/arrow-down.png"
+					alt=""></a>
+
+		</section>
+
+		<section id="more">
+
+			<div class="section-content">
+				<h2><img src="images/tit-clientes.png" alt=""></h2>
+
+				<div class="section-content__cards">
+					<div class="section-content__cards__card">
+						<div class="section-content__cards__card__carousel">
+							<div class="slide" id="slide-1">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, aliquid labore? Nesciunt repellat
+									corrupti quibusdam aut. Architecto tempora cupiditate cumque modi, nisi officiis beatae laudantium sit
+									nulla asperiores omnis sequi?
+								</p>
+							</div>
+							<div class="slide" id="slide-2">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, aliquid labore? Nesciunt repellat
+									corrupti quibusdam aut. Architecto tempora cupiditate cumque modi, nisi officiis beatae laudantium sit
+									nulla asperiores omnis sequi?
+								</p>
+							</div>
+							<div class="slide" id="slide-3">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, aliquid labore? Nesciunt repellat
+									corrupti quibusdam aut. Architecto tempora cupiditate cumque modi, nisi officiis beatae laudantium sit
+									nulla asperiores omnis sequi?
+								</p>
+							</div>
+						</div>
+						<div class="slider-counter">
+							<a href="#slide-1">1</a>
+							<a href="#slide-2">2</a>
+							<a href="#slide-3">3</a>
+						</div>
+
+					</div>
 				</div>
 			</div>
 
@@ -63,5 +105,15 @@
 	</div>
 
 </body>
+<script>
+	($(function () {
+		$(".scroll-to").click(function () {
+			let target = $(this).data('target');
+			$('html, body').animate({
+				scrollTop: $(target).offset().top
+			}, 2000);
+		});
+	}))
+</script>
 
 </html>
