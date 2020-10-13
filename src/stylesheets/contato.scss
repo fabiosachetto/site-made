@@ -16,6 +16,10 @@
         margin: vw(140px) 0;
         flex: 1;
 
+        &.first {
+          margin-right: vw(50px);
+        }
+
         &__title-holder {
           margin-top: vw(25px);
           text-align: left;

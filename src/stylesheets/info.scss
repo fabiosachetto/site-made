@@ -52,6 +52,13 @@
           scroll-snap-type: x mandatory;
           scroll-behavior: smooth;
           -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+
+          ::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+          }
 
           > div {
             margin: 0 vw(20px) 0 0;
@@ -75,6 +82,23 @@
           text-decoration: none;
           font-size: rem(20px);
           color: #fff;
+
+          a {
+            margin-right: vw(30px);
+
+            img {
+              filter: grayscale(1);
+              opacity: 0.4;
+              transition: 0.3s;
+            }
+
+            &:hover {
+              img {
+                filter: none;
+                opacity: 1;
+              }
+            }
+          }
         }
       }
     }
