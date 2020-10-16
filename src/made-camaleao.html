@@ -5,6 +5,22 @@
 	<meta charset="utf-8">
 	<title>Made Rio | Home</title>
 	<meta name="description" content="" />
+
+	<style>
+		#more .section-content__cards__card__carousel {
+			-ms-scroll-snap-type: x mandatory;
+			scroll-snap-type: x mandatory;
+			scroll-behavior: smooth;
+			-webkit-overflow-scrolling: touch;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+		}
+
+		#more .section-content__cards__card__carousel::-webkit-scrollbar {
+			width: 0;
+			background: transparent;
+		}
+	</style>
 </head>
 
 <body>
@@ -86,7 +102,11 @@
 							<a href="#slide-2"><img src="images/btn_02.png" alt=""></a>
 							<a href="#slide-3"><img src="images/btn_03.png" alt=""></a>
 						</div>
-
+						<div class="images-holder__card__button-holder">
+							<a href="javascript:;" class="btn-scroll">
+								<img src="images/scroll-down.png" alt="scroll down" data-target="#made-chameleon" class="scroll-to">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

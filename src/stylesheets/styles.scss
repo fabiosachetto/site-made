@@ -164,6 +164,8 @@ section {
   .img-slogan {
     margin: 0;
     text-align: right;
+    position: fixed;
+    right: vw(100px);
   }
 }
 
@@ -230,7 +232,7 @@ section {
     }
 
     &__card {
-      margin: vw(140px) vw(25px) 0;
+      margin: vw(120px) vw(25px) 0;
 
       .border {
         display: block;
@@ -267,7 +269,7 @@ section {
       }
 
       &__button-holder {
-        margin-top: rem(30px);
+        margin-top: vw(20px);
       }
     }
   }
