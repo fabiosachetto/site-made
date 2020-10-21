@@ -16,19 +16,44 @@ const rangeSlider = document.getElementById('hue-rotate');
 rangeSlider.addEventListener('change', hueFunction(this));
 
 window.hueFunction = hueFunction;
-
 const video = document.getElementById('main-video');
-// const items = $('#main nav ul li');
+
+// let intervalRewind;
+
+// // eslint-disable-next-line prefer-const
+// intervalRewind = () => {
+//   setInterval(() => {
+//     video.playbackRate = 1.0;
+//     if (video.currentTime === 0) {
+//       clearInterval(intervalRewind);
+//       video.pause();
+//     } else {
+//       video.currentTime += -0.1;
+//     }
+//   }, 30);
+// };
+
+// window.intervalRewind = intervalRewind;
 
 video.onloadeddata = () => {
   // alert('oi');
   // video.play();
   rangeSlider.setAttribute('value', 128);
 };
+
 video.addEventListener('ended', () => {
   console.log('end');
   const items = $('#main nav ul li');
+  const footerLeft = $('footer .left');
+  const footerRight = $('footer .right');
+  const colorSlider = $('.colorslider');
   items.addClass('slide-in-blurred-left');
+  colorSlider.addClass('slide-in-blurred-right');
+  footerLeft.addClass('scale-in-ver-top');
+  footerRight.addClass('scale-in-ver-top');
+  // setTimeout(() => {
+  //   $('#home').addClass('slide-out-fwd-center');
+  // }, 1000);
 });
 
 video.addEventListener('timeupdate', () => {
@@ -39,30 +64,3 @@ video.addEventListener('timeupdate', () => {
     video.removeEventListener('timeupdate', () => {});
   }
 });
-
-// const items = $('#main nav ul li');
-// $.each(items, function () {
-//   setTimeout(() => {
-//     $(this).addClass('slide-in-blurred-left');
-//   }, 1000);
-// });
-
-// $('#main nav ul li').each((el) => {
-//   $(el).delay(500).addClass('slide-in-blurred-left');
-// });
-
-// $('#main nav ul li').each((el) => {
-//   console.log(el);
-//   $(el).delay(1000).addClass('slide-in-blurred-left');
-// });
-
-// $(() => {
-
-// });
-
-// items.each((el) => {
-//   setTimeout(() => {
-//     console.log(el);
-//     $(el).addClass('slide-in-blurred-left');
-//   }, 1000);
-// });
