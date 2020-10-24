@@ -98,10 +98,10 @@
 		</section>
 
 		<footer>
-			<div>
+			<div class="left">
 				Credits. All rights reserved.
 			</div>
-			<div>
+			<div class="right">
 				<img src="images/txt-established.png" alt="Established since never.">
 			</div>
 		</footer>
@@ -109,5 +109,18 @@
 	</div>
 
 </body>
+<script>
+	$(function () {
+		// alert('oi')
+		const items = $('#main nav ul li');
+		const footerLeft = $('footer .left');
+		const footerRight = $('footer .right');
+		const colorSlider = $('.colorslider');
+		items.addClass('slide-in-blurred-left');
+		colorSlider.addClass('slide-in-blurred-right');
+		footerLeft.addClass('scale-in-ver-top');
+		footerRight.addClass('scale-in-ver-top');
+	});
+</script>
 
 </html>
