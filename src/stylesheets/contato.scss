@@ -36,7 +36,7 @@
 
           a {
             text-decoration: none;
-            color: #000;
+            color: #fff;
             transition: 0.3s;
 
             &:hover {
@@ -50,12 +50,12 @@
         }
 
         &__button-holder {
-          margin-top: vw(30px);
+          margin-top: vw(50px);
         }
 
         .separator {
           height: 2px;
-          background: #000;
+          background: #fff;
           margin: 20px 0;
           width: 95px;
         }

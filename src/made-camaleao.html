@@ -35,7 +35,7 @@
 				</li>
 				<li>
 					<span class="current">
-						<a href="made-camaleao.html">MADE CAMALEÃO</a>
+						<a href="made-camaleao.html">ADAPTIVE <br> CREATIVITY</a>
 					</span>
 				</li>
 				<li>
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 
-			<a href="javascript:;" data-target="#more" class="scroll-to arrow-down"><img src="images/arrow-down.png"
+			<a href="javascript:;" data-target="#more" class="scroll-to arrow-down"><img src="images/scroll-camaleao.png"
 					alt=""></a>
 
 		</section>
@@ -104,7 +104,7 @@
 						</div>
 						<div class="images-holder__card__button-holder">
 							<a href="javascript:;" class="btn-scroll">
-								<img src="images/scroll-down.png" alt="scroll down" data-target="#made-chameleon" class="scroll-to">
+								<img src="images/scroll-up.png" alt="scroll down" data-target="#made-chameleon" class="scroll-to">
 							</a>
 						</div>
 					</div>
@@ -114,19 +114,28 @@
 		</section>
 
 		<footer>
-			<div>
+			<div class="left">
 				Credits. All rights reserved.
 			</div>
-			<div>
+			<div class="right">
 				<img src="images/txt-established.png" alt="Established since never.">
 			</div>
 		</footer>
+
 
 	</div>
 
 </body>
 <script>
 	($(function () {
+
+		const items = $('#main nav ul li');
+		const footerLeft = $('footer .left');
+		const footerRight = $('footer .right');
+		items.addClass('slide-in-blurred-left');
+		footerLeft.addClass('scale-in-ver-top');
+		footerRight.addClass('scale-in-ver-top');
+
 		$(".scroll-to").click(function () {
 			let target = $(this).data('target');
 			$('html, body').animate({

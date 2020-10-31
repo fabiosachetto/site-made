@@ -35,7 +35,7 @@
 
     &__cards {
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       margin: vw(20px) 0;
 
       &__card {
