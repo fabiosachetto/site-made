@@ -95,6 +95,7 @@ nav {
 
         a {
           line-height: 1;
+          clear: both;
         }
       }
 
@@ -217,13 +218,13 @@ section {
 
     .range {
       display: block;
-      width: 303px;
+      width: rem(253px);
     }
   }
 
   .intro {
     position: absolute;
-    top: rem(450px);
+    top: rem(280px);
     left: vw(100px);
     z-index: 10;
 
